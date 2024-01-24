@@ -71,8 +71,8 @@ echo "progress,sub,sup{vertical-align:baseline}*,::after,::before{box-sizing:bor
     echo ""
     echo "function testJS() {"
     echo "    const paragraphElement = document.createElement('p');"
-    echo "    correctGuess.textContent = String('If this element is present, Hello World to JavaScript!');"
-    echo "    correctGuess.style.color = 'blue';"
+    echo "    paragraphElement.textContent = String('If this element is present, Hello World from JavaScript!');"
+    echo "    paragraphElement.style.color = 'blue';"
     echo ""
     echo "    const jsSection = document.getElementById('jsContentTest');"
     echo "    jsSection.appendChild(paragraphElement);"
@@ -91,7 +91,8 @@ fi
 echo "Successfully created project. Attempting to open VSCode."
 echo "To push repository: git push -u origin main"
 
-# Open VSCode
+# Open VSCode and index.html, attempt to open on various version (Linux, MACOS/Unix, Windows)
 code .
+xdg-open index.html || open index.html || explorer.exe index.html
 
 exit 0
