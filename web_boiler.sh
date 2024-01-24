@@ -41,11 +41,42 @@ echo "progress,sub,sup{vertical-align:baseline}*,::after,::before{box-sizing:bor
     echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
     echo "    <meta name=\"author\" content=\"George D. Crochiere\">"
     echo "    <title>$1</title>"
+    echo "    <link rel=\"stylesheet\" href=\"./src/css/modnorm.min.css\" />"
+    echo "    <link rel=\"stylesheet\" href=\"./src/css/styles.css\" />"
     echo "</head>"
     echo "<body>"
-    echo ""
+    echo "    <script src=\"./src/js/main.js\" defer></script>"
+    echo "    <h1>Hello World from HTML!</h1>"
+    echo "    <h2>If red, Hello world from CSS!</h2>"
+    echo "    <div id=\"jsContentTest\"></div>"
     echo "</body>"
     echo "</html>"
 } >> index.html
 
+{
+    echo "h2 {"
+    echo "    color: red;"
+    echo "}"
+} >> src/css/styles.css
 
+{
+    echo "testJS();"
+    echo ""
+    echo "function testJS() {"
+    echo "    const paragraphElement = document.createElement('p');"
+    echo "    correctGuess.textContent = String('If this element is present, Hello World to JavaScript!');"
+    echo "    correctGuess.style.color = 'blue';"
+    echo ""
+    echo "    const jsSection = document.getElementById('jsContentTest');"
+    echo "    jsSection.appendChild(paragraphElement);"
+    echo "}"
+} >> src/js/main.js
+
+code .
+
+if [ "$VAR_GIT" = true ]; then
+    git add .
+    git commit -m "Initial Commit - Added Boilerplate Code from Shell Script"
+    git branch -M main
+    git push -u origin main
+fi
