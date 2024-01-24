@@ -2,12 +2,13 @@
 # Scaffolding for a new, basic webdev project
 
 if [ "$1" = "-h" ]; then
-    funcUse="web_boiler [-h] [projectName] [projectName remoteGitRepository] -- creates a blank project for web development, with the option to include a remote repository link
-    
+    funcUse="-----------------------------------------
+    web_boiler [-h] [projectName] [projectName remoteGitRepository] -- creates a blank project for web development, with the option to include a remote repository link
     where:
         -h                      shows this dialog message
         projectName             the name of the new project, no spaces
-        remoteGitRepository     the link to the remote repository to connect to the local repository"
+        remoteGitRepository     the link to the remote repository to connect to the local repository
+    -----------------------------------------"
     echo "$funcUse"
     exit 0
 fi
