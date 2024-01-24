@@ -36,7 +36,7 @@ fi
 
 # Make project structure
 mkdir -p "$1"/src/css "$1"/src/js "$1"/src/images
-touch "$1"/index.html "$1"/src/css/styles.css "$1"/src/css/modnorm.min.css "$1"/src/js/main.js
+touch "$1"/index.html "$1"/src/css/styles.css "$1"/src/css/modnorm.min.css "$1"/src/js/main.js "$1"/.gitignore
 cd "$1"
 
 # Add boilerplate code to test HTML, CSS, and JS
@@ -79,6 +79,28 @@ echo "progress,sub,sup{vertical-align:baseline}*,::after,::before{box-sizing:bor
     echo "    jsSection.appendChild(paragraphElement);"
     echo "}"
 } >> src/js/main.js
+
+{
+echo "*.ignore"
+echo "*.eslintrc"
+echo ""
+echo "*.zip"
+echo "*.7z"
+echo "*.rar"
+echo "*.tar.gz"
+echo ""
+echo ".config"
+echo ".DS_Store"
+echo ".cache"
+echo ""
+echo "logs"
+echo "*.log"
+echo "pm-debug.log* "
+echo "yarn-debug.log* "
+echo "yarn-error.log* "
+echo "lerna-debug.log* "
+
+} >> .gitignore
 
 # Attempt to make repo, if fail, delete project
 if [ "$VAR_GIT" = true ]; then
