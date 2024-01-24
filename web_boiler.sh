@@ -20,15 +20,6 @@ elif [ -n "$2" ]; then
         exit 3
     fi
     echo "Git is properly installed. Continuing..."
-
-    # Test validity of remote repository
-    git init
-    git remote add origin "$2"
-    if ! git push -u origin main; then
-        echo "Error: Second argument error. The second argument regarding the creation of a git repository. Value passed must be a valid remote repository. Exiting..."
-        rmdir -r -force /.git
-        exit 4
-    fi
 fi
 
 # Make project structure
@@ -77,11 +68,19 @@ echo "progress,sub,sup{vertical-align:baseline}*,::after,::before{box-sizing:bor
     echo "}"
 } >> src/js/main.js
 
-code .
-
+# Attempt to make repo, if fail, delete project
 if [ "$VAR_GIT" = true ]; then
+    git init
     git add .
     git commit -m "Initial Commit - Added Boilerplate Code from Shell Script"
     git branch -M main
-    git push -u origin main
+    git remote add origin "$2"
 fi
+
+echo "Successfully created project. Attempting to open VSCode."
+echo "To push repository: git push -u origin main"
+
+# Open VSCode
+code .
+
+exit 0
