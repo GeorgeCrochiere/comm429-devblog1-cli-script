@@ -6,22 +6,27 @@ if [ -z "$1" ]; then
     echo "Error: No arguments provided. Requires a project name."
     exit 1
 elif [ -n "$2" ]; then
-    if [ "$2" = 'true' ] || [ "$2" = 'false' ]
-        then
-            VAR_GIT=true
-    else
-        echo "Error: Second argument error. The second argument regarding the creation of a git repository. Value must be 'true' or 'false'. Exiting..."
-        exit 2
-    fi
-fi
+    VAR_GIT=true
 
-# If git is true, check for git installation and conditions
-if [ "$VAR_GIT" = true ]; then
+    # If git is true, check for git installation and conditions
     if ! [ -x "$(command -v git)" ]; then
         echo 'Error: git is not installed. Cannot use to create a git repository. Exiting...'
-        exit 3
+        exit 2
     elif [ -z "$(git config --get user.name)" ] || [ -z "$(git config --get user.email)" ]; then
-        echo 'Error: git is not configured (username, email). Cannot create repository. Exiting...'
+        echo 'Error: git is not configured (username, email). Cannot create repository.'
+        echo 'Use: git config --global user.name "NAME"'
+        echo 'Use: git config --global user.email "VALID EMAIL"'
+        echo 'Exiting...'
+        exit 3
+    fi
+    echo "Git is properly installed. Continuing..."
+
+    # Test validity of remote repository
+    git init
+    git remote add origin "$2"
+    if ! git push -u origin main; then
+        echo "Error: Second argument error. The second argument regarding the creation of a git repository. Value passed must be a valid remote repository. Exiting..."
+        rmdir -r -force /.git
         exit 4
     fi
 fi
