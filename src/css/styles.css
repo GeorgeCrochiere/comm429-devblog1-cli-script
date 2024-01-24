@@ -1,0 +1,29 @@
+:root {
+    --b-link: #47e694;
+    --b-link-visited: #3e9c6b;
+}
+
+body {
+    min-width: 100%;
+    margin: 0px;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+blockquote {
+    background-color: var(--b-bg-2);
+    color: var(--b-txt);
+    padding-right: 10px;
+}
+
+blockquote a,
+a {
+    color: var(--b-link);
+}
+
+blockquote a:visited,
+a:visited {
+    color: var(--b-link-visited);
+}
