@@ -121,7 +121,7 @@ To run the program on Windows:
         bash web_boiler.sh projectName remoteGitRepo
         ```
 
-        You can then push the repository to GitHub with the following command. This command must be done seperately due to proxy issues.
+        You can then push the repository to GitHub with the following command. This command must be done seperately due to proxy issues. This command must be executed in the terminal, whilst in your new project's directory, which can be done in VSCode's terminal once the new project loads.
 
         ```
         git push -u origin main
@@ -170,7 +170,7 @@ To run the program on Linux:
         shell web_boiler.sh projectName remoteGitRepo
         ```
 
-        You can then push the repository to GitHub with the following command. This command must be done seperately due to proxy issues.
+        You can then push the repository to GitHub with the following command. This command must be done seperately due to proxy issues. This command must be executed in the terminal, whilst in your new project's directory, which can be done in VSCode's terminal once the new project loads.
 
         ```
         git push -u origin main

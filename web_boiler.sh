@@ -118,7 +118,7 @@ fi
 echo "Successfully created project. Attempting to open VSCode."
 
 if [ "$VAR_GIT" = true ]; then
-    echo "To push repository: git push -u origin main"
+    echo "To push repository once in project directory: git push -u origin main"
 fi
 
 # Open VSCode and index.html, attempt to open on various version (Linux, MACOS/Unix, Windows)
