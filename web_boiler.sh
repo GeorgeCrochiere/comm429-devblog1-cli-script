@@ -48,7 +48,7 @@ echo "progress,sub,sup{vertical-align:baseline}*,::after,::before{box-sizing:bor
     echo "<head>"
     echo "    <meta charset=\"UTF-8\">"
     echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
-    echo "    <meta name=\"author\" content=\"George D. Crochiere\">"
+    echo "    <meta name=\"author\" content=\"YOUR NAME HERE\">"
     echo "    <title>$1</title>"
     echo "    <link rel=\"stylesheet\" href=\"./src/css/modnorm.min.css\" />"
     echo "    <link rel=\"stylesheet\" href=\"./src/css/styles.css\" />"

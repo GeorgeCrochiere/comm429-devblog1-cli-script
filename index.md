@@ -191,7 +191,11 @@ Regardless of the method on how you create your project, upon successful creatio
 
 ![*The index.html page in a browser, opened by the script.*](./src/images/ResultPageTest.png)
 
-You can now start working on your project by editing the files within this directory. This can include adding content in the webpage, adding images, styles, and more! You can see your results in the browser by refreshing the page that was opened, the ```index.html``` file.
+You will also have the following VSCode window open, showing the entire project and it's structure.
+
+![*VSCode open, showing the project structure.*](./src/images/VSCodeOutput.png)
+
+You can now start working on your project by editing the files within this directory. This can include adding content in the webpage, adding images, styles, and more! As shown in the above output, there is even a spot for your name on Line 6! You can see your results in the browser by refreshing the page that was opened, the ```index.html``` file.
 
 Happy Coding!
 
