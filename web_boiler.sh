@@ -3,7 +3,10 @@
 
 if [ "$1" = "-h" ]; then
     funcUse="-----------------------------------------
-    web_boiler [-h] [projectName] [projectName remoteGitRepository] -- creates a blank project for web development, with the option to include a remote repository link
+    web_boiler.sh [projectName] [remoteGitRepository]  -- creates a blank project for web development, with the option to include a remote repository link
+    web_boiler.sh [projectName]                        -- creates a blank project for web development
+    web_boiler.sh -h                                   -- shows this help output
+    
     where:
         -h                      shows this dialog message
         projectName             the name of the new project, no spaces
