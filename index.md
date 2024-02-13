@@ -73,7 +73,7 @@ To configure git, run the following commands using your name and respective emai
 ## Installation
 Follow the proceeding steps to install the script. These steps work for both the Windows and Linux operating systems.
 
-1. Download the shell file ```web_boilder.sh``` and locate it on your system.
+1. <a href="https://github.com/GeorgeCrochiere/comm429-devblog1-cli-script/blob/main/web_boiler.sh">Download</a> the shell file ```web_boilder.sh``` and locate it on your system.
 2. Place the shell script in the projects folder as specified in the **Prerequisites** section
 
 An example is shown below, where all projects are placed in the directory ```Projects```. A couple example projects are in this directory.
