@@ -15,7 +15,7 @@ COMM-429 Front End Development
     - [Linux](#run-linux)
 - [Results](#results)
 
----
+___
 
 <a name="intro"></a>
 
@@ -40,7 +40,7 @@ An additional ```.git``` folder can be created if the proper remote repository p
 
 After the project is created, the project itself will open up in Visual Studio Code and open up the resulting ```index.html``` file in the default browser.
 
----
+___
 
 <a name="prereq"></a>
 
@@ -66,7 +66,7 @@ To configure git, run the following commands using your name and respective emai
 
 > **NOTE:** For Visual Studio Code (VSCode), ensure that the path variable "code" is properly added, especially for Windows. Refer to [the VSCode Installation Documentation](https://code.visualstudio.com/docs/setup/setup-overview) for your operating system to ensure VSCode is fully installed.
 
----
+___
 
 <a name="install"></a>
 
@@ -80,7 +80,7 @@ An example is shown below, where all projects are placed in the directory ```Pro
 
 ![*An example directory showing the "Projects" folder with the "web_boiler.sh" script and various projects inside the directory.*](./src/images/InstallationLocation.png)
 
----
+___
 
 <a name="run"></a>
 
@@ -182,7 +182,7 @@ To run the program on Linux:
         shell web_boiler.sh practice-website https://github.com/GeorgeCrochiere/test-repo.git
         ```
 
----
+___
 
 <a name="results"></a>
 
@@ -199,6 +199,6 @@ You can now start working on your project by editing the files within this direc
 
 Happy Coding!
 
----
+___
 
 ##### &copy; 2024. George D. Crochiere
